@@ -8,9 +8,7 @@
     "start": "node index.js",
     "test": "mocha --exit",
     "generate-docs": "jsdoc -c ./package.json",
-
-   
-    "build": "npm run build:css && npm run build:js && npm run build:img"
+    "build": "npm run start "
   },
   "repository": {
     "type": "git",
@@ -47,6 +45,7 @@
     "passport": "^0.4.0",
     "passport-auth0": "^1.3.0",
     "pg": "^7.12.1",
+    "serverless-http": "^2.3.2",
     "zipcodes": "^8.0.0"
   },
   "devDependencies": {

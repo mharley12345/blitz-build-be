@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("express")
 
 const helmet = require("helmet");
 const ProjectsRouter = require("./data/projects/projects.router");
@@ -23,7 +23,7 @@ function logger(req, res, next) {
   next();
 }
 
-
+server.use(cors())
 server.use(function(req,res,next){
   res.header("Access-Control-Allow-Origin", "*");
   
@@ -32,7 +32,7 @@ server.use(function(req,res,next){
 })
 
 
-server.use(cors())
+
 server.use(logger);
 
 
@@ -49,8 +49,10 @@ server.use("/delay_logs",authenticate,delayLogsRouter);
 // server.use('/s3',documentRouter)
 server.use('/90_day',authenticate,NinetyDayRouter)
 server.use('/docs',authenticate,documentRouter)
+
 server.use('/devdocs',express.static(__dirname + '/public/jsdocs/index.html'))
-module.exports = server;
+
+module.exports = server
 
 
 
