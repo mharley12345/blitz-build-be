@@ -45,6 +45,7 @@
     "passport": "^0.4.0",
     "passport-auth0": "^1.3.0",
     "pg": "^7.12.1",
+    "serverless-http": "^2.3.2",
     "zipcodes": "^8.0.0"
   },
   "devDependencies": {
